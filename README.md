@@ -22,6 +22,24 @@ The backend reads env vars from `.env`, and Docker Compose also uses the same va
 - `frontend/` contains the React app
 - `docker-compose.yml` starts the PostgreSQL container
 
+# Habit Tracker
+
+Full-stack habit tracking application built with React, FastAPI and PostgreSQL.
+
+## Screenshots
+
+### Home page
+
+<img src="docs/home.png" alt="Habit tracking home" width="800">
+
+### Login page
+
+<img src="docs/login.png" alt="Habit tracking login" width="800">
+
+### Dashboard
+
+<img src="docs/user_dashboard.png" alt="Habit Tracker dashboard" width="800">
+
 ## Start the App
 
 ### 1. Start PostgreSQL
