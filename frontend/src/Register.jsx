@@ -63,7 +63,7 @@ function Register({ onSuccess, goToLogin, goToHome }) {
 
                 <button
                     type="button"
-                    className="auth-switch"
+                    className="auth-switch auth-home-link"
                     onClick={goToLogin}
                 >
                     Already have an account? Login
