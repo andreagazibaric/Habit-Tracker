@@ -11,14 +11,14 @@ Simple habit tracking app with a FastAPI backend, PostgreSQL database and a Reac
 
 ## Public Repo Setup
 
-Before pushing to GitHub, copy [`.env.example`](.env.example) to `.env` and fill in the values you want to use locally.
+Before running the app locally, copy [`.env.example`](.env.example) to `.env` and fill in the values you want to use locally.
 
 The backend reads env vars from `.env`, and Docker Compose also uses the same values.
 
 
 ## Project Structure
 
-- `backend/` contains the FastAPI API, models, schemas, and routers
+- `backend/` contains the FastAPI API, models, schemas and routers
 - `frontend/` contains the React app
 - `docker-compose.yml` starts the PostgreSQL container
 
