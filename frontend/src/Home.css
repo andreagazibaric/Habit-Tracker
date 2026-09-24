@@ -1,0 +1,210 @@
+.home-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 32px 24px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.18), transparent 32%),
+        linear-gradient(160deg, #f8fafc 0%, #eef2ff 45%, #ffffff 100%);
+}
+
+.home-backdrop {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(40px);
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.home-backdrop-one {
+    top: 8%;
+    left: -5%;
+    width: 240px;
+    height: 240px;
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.home-backdrop-two {
+    right: -8%;
+    bottom: 6%;
+    width: 280px;
+    height: 280px;
+    background: rgba(79, 70, 229, 0.18);
+}
+
+.home-shell {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 100%);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.home-copy {
+    text-align: left;
+    padding: 18px 8px;
+}
+
+.home-kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.1);
+    color: #4338ca;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.home-copy h1 {
+    margin: 18px 0 16px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    max-width: 10ch;
+    color: #0f172a;
+}
+
+.home-copy p {
+    max-width: 56ch;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.home-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.home-button {
+    min-width: 150px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+}
+
+.home-button:hover {
+    transform: translateY(-1px);
+}
+
+.home-button.primary {
+    color: #fff;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    box-shadow: 0 18px 40px rgba(79, 70, 229, 0.25);
+}
+
+.home-button.secondary {
+    color: #1e293b;
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(148, 163, 184, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.home-note {
+    margin-top: 18px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.home-panel {
+    display: grid;
+    gap: 16px;
+}
+
+.home-card,
+.home-card-large {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 24px;
+    box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.home-card-large {
+    padding: 30px;
+}
+
+.home-card-large span,
+.home-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.home-card-large strong,
+.home-card strong {
+    display: block;
+    margin-top: 12px;
+    color: #0f172a;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.home-card-large p {
+    margin-top: 10px;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.home-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.home-card {
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .home-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .home-copy h1 {
+        max-width: 12ch;
+    }
+
+    .home-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-page {
+        padding: 20px 16px;
+    }
+
+    .home-copy {
+        padding: 0;
+    }
+
+    .home-actions {
+        flex-direction: column;
+    }
+
+    .home-button {
+        width: 100%;
+    }
+}
