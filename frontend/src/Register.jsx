@@ -71,7 +71,7 @@ function Register({ onSuccess, goToLogin, goToHome }) {
 
                 <button
                     type="button"
-                    className="auth-switch auth-home-link"
+                    className="auth-switch"
                     onClick={goToHome}
                 >
                     Back to home
